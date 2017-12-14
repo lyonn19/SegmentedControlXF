@@ -13,5 +13,10 @@ namespace SegmentedControlXF
         {
             InitializeComponent();
         }
+
+        private void SegmentedControl_OnValueChanged(object sender, SegmentedControl.FormsPlugin.Abstractions.ValueChangedEventArgs e)
+        {
+
+        }
     }
 }

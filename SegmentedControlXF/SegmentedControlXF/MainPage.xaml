@@ -1,13 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:SegmentedControlXF"
+             xmlns:abstractions="clr-namespace:SegmentedControl.FormsPlugin.Abstractions;assembly=SegmentedControl.FormsPlugin.Abstractions"
              x:Class="SegmentedControlXF.MainPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="30">
+            <abstractions:SegmentedControl x:Name="SegControl" TintColor="Chocolate" 
+                                           SelectedSegment="0" 
+                                           Margin="20"
+                                           ValueChanged="SegmentedControl_OnValueChanged">
+                <abstractions:SegmentedControl.Children>
+                    <abstractions:SegmentedControlOption Text="Cédula" />
+                    <abstractions:SegmentedControlOption Text="Pasaporte" />
+                </abstractions:SegmentedControl.Children>
+            </abstractions:SegmentedControl>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

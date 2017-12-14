@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using SegmentedControl.FormsPlugin.iOS;
 using UIKit;
 
 namespace SegmentedControlXF.iOS
@@ -22,6 +23,8 @@ namespace SegmentedControlXF.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+
+            SegmentedControlRenderer.Init();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 

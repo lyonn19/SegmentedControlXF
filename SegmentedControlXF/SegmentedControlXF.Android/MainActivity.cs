@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using SegmentedControl.FormsPlugin.Android;
 
 namespace SegmentedControlXF.Droid
 {
@@ -18,7 +19,7 @@ namespace SegmentedControlXF.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-
+            SegmentedControlRenderer.Init();
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
